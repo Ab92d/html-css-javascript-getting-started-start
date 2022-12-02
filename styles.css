@@ -1,17 +1,114 @@
+/* reset margin*/
+{
+margin:0
+}
+
+/* height sets the dimensions of the page */
+html,
+body {
+    height: 100%;
+    font-family: "Constantia";
+    background-color: burlywood;
+}
+/* set the margin for paragraphs. Each values corresponds to: top, right, bottom, left  */
+p{
+    margin: 0.5em 0 0.5em 0 ;
+}
+
+header{
+    display: block;
+    /* fixes the nav bar to to the top of the page even when user scrolls */
+    position: fixed;
+    /* fixes the nav bar at the very top and very left of the window */
+    top: 0;
+    left: 0;
+    /* sets the nav bar to 100% width of window*/
+    width: 100%;
+    background-color: khaki;
+    padding: 10px;
+}
+
+/* sets the color of the links on the window and after the links have been clicked */
+nav a:visited,
+nav a:link {
+    color: darkred;
+    /* gets rid of the line under the links*/
+    text-decoration: none;
+}
+/* gets rid of bullet points on list and gets rid of space inbetween*/
+nav > ul {
+    display: inline;
+    padding: 0;
+}
+/* puts the links in the nav bar next to each other*/
+nav > ul > li {
+    /* inline puts the links next to each other,but block means you can
+    still have control over width, marin, padding... */
+    display: inline-block;
+    /* tells the browser to not interpret this item as a list item  */
+    list-style: none;
+    margin: 0 5px 0 5px;
+}
+
+/* adds an image to the background*/
+main {
+    display: block;
+    background-image: url("images/background.png");
+    /* another way to adjust dimensions of an object */
+    padding-top: 3em;
+    padding-bottom: 3em;
+    min-height: 85%;
+}
+
+/* affects the nav bar at the bottom of the page*/
+footer{
+    padding: 15px; /* this is fixed */
+}
+
+/* gives the image, named aside in index page, a padding
+in this case its the logo */
+aside,
+article {
+    padding: 2em;  /* creates size based off the current font size */
+}                   /* em is proportional value, changes to create flexible layouts */
+
+/* Centre an image within a container. Now, when the website is on a phone the logo stacks
+above the main image. But when its in full desktop size it is next to teh image.
+NOT WORKING FOR ME RN! */
+aside {
+    text-align: center;
+}
+
+/* ensures content doesn't stretch too far across page*/
+article {
+    width: 75%;
+}
+
+/* targets desktop viewing*/
+@media only screen and (min-width: 768px) {
+    /* creates two columns*/
+    main {
+        display: flex;
+    }
+    /* want to logo to pull away from left side of screen a little bit*/
+    aside {
+        margin-left: 2%;
+    }
+}
+
 div {
     background-color: beige;
     color: rgb(112, 166, 104)
 }
 h1 {
     color: aliceblue;
-    background-color: aqua;
+    background-color: olive;
 }
 .heading {
     color: blueviolet;
-    background-color: azure;
+    background-color: aquamarine;
     width: 50%;
-    background: s;
 }
 body {
-    background-color: sandybrown;
+
 }
